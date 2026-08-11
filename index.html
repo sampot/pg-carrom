@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#1c2a1c" />
+    <meta
+      name="description"
+      content="康樂球（彈珠）：俯視方形桌面、拖曳彈射打擊珠、擊落棋子入袋得分。人機或雙人。純前端 Playgrounds SAM。"
+    />
+    <title>康樂球</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎱</text></svg>"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <p class="eyebrow">街機</p>
+        <h1>康樂球</h1>
+        <p class="tagline">拖曳彈射打擊珠 · 棋子入袋得分 · 黑先？白先</p>
+      </header>
+
+      <div class="hud">
+        <span class="chip">輪到 <b id="turn">白</b></span>
+        <span class="chip" id="black-chip">黑殘 <b id="black-left">6</b></span>
+        <span class="chip" id="white-chip">白殘 <b id="white-left">6</b></span>
+        <span class="chip">得分 <b id="score">0</b></span>
+      </div>
+
+      <p id="status" class="status" role="status">白方先手</p>
+
+      <div class="controls">
+        <button type="button" id="btn-start" class="primary">開局</button>
+        <button type="button" id="btn-mute" class="ghost" aria-pressed="true">音效</button>
+      </div>
+
+      <div class="stage">
+        <canvas id="game" width="360" height="360" aria-label="康樂球桌"></canvas>
+      </div>
+
+      <details class="rules">
+        <summary>怎麼玩</summary>
+        <ul>
+          <li>回合制：白棋吃白、黑棋吃黑；用拖曳打擊珠（slingshot）彈射撞擊。</li>
+          <li>棋子掉進四角落口袋即入袋；先清光己方棋子、再把「王」打進者獲勝。</li>
+          <li>王太早進袋犯規，重擺回中央；打擊珠進袋也犯規、換手。</li>
+          <li>可切換「人機」（自己 vs AI）或「雙人」各自彈射。</li>
+        </ul>
+      </details>
+
+      <footer class="meta">
+        <span>拖曳打擊珠、放開即彈射；彈多遠＝射多用力。</span>
+      </footer>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
