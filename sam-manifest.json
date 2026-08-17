@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "rev": "f658f5a",
+  "files": [
+    "app.js",
+    "assets/sfx/impactMetal_medium_000.ogg",
+    "assets/sfx/impactPlate_medium_000.ogg",
+    "assets/sfx/impactWood_heavy_000.ogg",
+    "assets/sfx/impactWood_light_000.ogg",
+    "assets/sfx/impactWood_medium_000.ogg",
+    "assets/sfx/Kenney_ImpactSounds-License.txt",
+    "audio.js",
+    "functions.js",
+    "game.js",
+    "index.html",
+    "styles.css"
+  ]
+}
